@@ -1,4 +1,5 @@
 # AI-powered segmentation and prognosis with missing MRI in pediatric brain tumors
+Link to the paper: https://doi.org/10.1038/s41698-025-01269-x
 
 To clone the code and install all dependencies, run 
 
