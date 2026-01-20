@@ -13,4 +13,38 @@ cd ../batchgeneratorsv2
 pip install -e .
 
 ```
-This repository is based on the nnUNet v2 model (https://github.com/MIC-DKFZ/nnUNet), so we follow their data convention for model training 
+This repository is based on the nnUNet v2 model (https://github.com/MIC-DKFZ/nnUNet), so we follow their data convention for model training. The training and test data should be organized as follows: 
+
+```
+data/
+├── raw/
+│   └── Dataset001_BrainTumor/
+│       ├── dataset.json
+│       ├── imagesTr/
+│       │   ├── Case001_0000.nii.gz
+│       │   ├── Case001_0001.nii.gz
+│       │   ├── Case001_0002.nii.gz
+│       │   ├── Case001_0003.nii.gz
+│       │   └── ...
+│       ├── labelsTr/
+│       │   ├── Case001.nii.gz
+│       │   └── ...
+│       ├── imagesTs/
+│       │   ├── Case101_0000.nii.gz
+│       │   ├── Case101_0001.nii.gz
+│       │   ├── Case101_0002.nii.gz
+│       │   ├── Case101_0003.nii.gz
+│       │   └── ...
+│       └── labelsTs/
+│           ├── Case101.nii.gz
+│           └── ...
+│
+├── preprocessed/
+│   └── Dataset001_BrainTumor/
+│       └── ...
+│
+└── results/
+    └── Dataset001_BrainTumor/
+        └── ...
+
+```
