@@ -52,3 +52,7 @@ data/
         └── ...
 
 ```
+
+**Model Training**
+
+First, we run the plan and preprocess command, you can use the following script
