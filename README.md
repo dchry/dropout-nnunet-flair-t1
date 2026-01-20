@@ -13,3 +13,4 @@ cd ../batchgeneratorsv2
 pip install -e .
 
 ```
+This repository is based on the nnUNet v2 model (https://github.com/MIC-DKFZ/nnUNet), so we follow their data convention for model training 
