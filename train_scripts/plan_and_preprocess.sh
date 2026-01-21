@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH --mem=32G
+#SBATCH --mem=16G
 #SBATCH -c 8
-#SBATCH -t 03:00:00
+#SBATCH -t 02:00:00
 #SBATCH --error=/logs/err_%j.err
 #SBATCH --output=/logs/out_%j.out
 #SBATCH -p gpuq
@@ -11,14 +11,13 @@ module load cuda11.8/toolkit/11.8.0
 nvidia-smi
 date
 
-# Activate the Miniconda base environment. Please adjust the path based on your local machine
+# Activate the Miniconda base environment.
 source {your_conda_directory}/miniconda3/bin/activate
 
-conda activate dropout_nnUNet
-pip install blosc2
+conda activate dropout_nnunet
 
 
-cd {parent_directory}/dropout-nnunet-flair-t1/nnUNet #Please adjust {parent_directory}
+cd {parent_directory}/dropout-nnunet-flair-t1/nnUNet
 
 export nnUNet_raw="{parent_directory}/data/raw"
 export nnUNet_preprocessed="{parent_directory}/data/preprocessed"
