@@ -87,5 +87,5 @@ dependencies:
       - yacs==0.1.8
       - zipp==3.21.0
 
-prefix: /home/chrysochod/miniconda3/envs/dropout_nnunet
+prefix: {your_local_path}/miniconda3/envs/dropout_nnunet
 
