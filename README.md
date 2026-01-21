@@ -60,5 +60,6 @@ data/
 First, we run the plan and preprocess command. You can use the following script, ensuring you have adjusted the required paths.
 
 ```
-scripts/plan_and_preprocess.sh
+train_scripts/plan_and_preprocess.sh
 ```
+Then, we train 3d_fullres configuration nnUNet models with different levels of dropout applied independently to channels 0 (FLAIR) and 1 (T1w-pre). 
