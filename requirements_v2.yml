@@ -12,13 +12,13 @@ dependencies:
   - setuptools
   - wheel
 
-  # --- PyTorch + CUDA 11.8 via conda (this is the important part)
+  # --- PyTorch + CUDA 11.8 via conda
   - pytorch=2.6.0
   - torchvision=0.21.0
   - torchaudio=2.6.0
   - pytorch-cuda=11.8
 
-  # --- Install what DOES exist on conda-forge
+  # --- Install what DOES exist on conda-forge / defaults
   - numpy=1.26.3
   - scipy=1.13.1
   - pandas=2.2.3
@@ -38,17 +38,17 @@ dependencies:
   - imageio=2.37.0
   - imagecodecs=2024.12.30
   - pydicom=2.4.4
-  - python-gdcm=3.0.24.1
-  - dicom2nifti=2.5.1  # (if this is missing on your forge mirror, move it to pip below)
 
   # These you confirmed work with conda
   - batchgenerators
   - fft-conv-pytorch
 
-  # --- pip-only deps (because conda can't find them)
+  # --- pip-only deps (not available as conda packages on your channels)
   - pip:
       - acvl-utils==0.2.1
       - connected-components-3d==3.22.0
       - dynamic-network-architectures==0.3.1
       - graphviz==0.20.3
       - yacs==0.1.8
+      - python-gdcm==3.0.24.1
+      - dicom2nifti==2.5.1
