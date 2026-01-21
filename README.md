@@ -57,7 +57,7 @@ data/
 
 **Model Training**
 
-First, we run the plan and preprocess command, you can use the following script
+First, we run the plan and preprocess command. You can use the following script, ensuring you have adjusted the required paths.
 
 ```
 scripts/plan_and_preprocess.sh
