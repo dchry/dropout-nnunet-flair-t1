@@ -16,7 +16,7 @@ pip install -e .
 
 ```
 
-Equivalently run 
+Or equivalently run 
 
 ```
 intstall_drp_nnunet.sh
