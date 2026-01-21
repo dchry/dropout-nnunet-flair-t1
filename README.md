@@ -9,6 +9,7 @@ To clone the code and install all dependencies, run
 git clone https://github.com/dchry/dropout-nnunet-flair-t1.git
 cd dropout-nnunet-flair-t1
 conda env create -f requirements.yml
+conda activate dropout_nnUNet
 cd nnUNet
 pip install -e .
 cd ../batchgeneratorsv2
