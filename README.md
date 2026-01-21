@@ -20,6 +20,7 @@ pip install -e .
 Or equivalently run 
 
 ```
+git clone https://github.com/dchry/dropout-nnunet-flair-t1.git
 sbatch install_drp_nnunet.sh
 ```
 **Data formatting**
