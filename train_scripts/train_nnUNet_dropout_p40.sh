@@ -15,8 +15,8 @@ date
 # Activate the Miniconda base environment
 source {your_conda_directory}/miniconda3/bin/activate
 
-conda activate dropout_nnUNet
-# pip install blosc2
+conda activate dropout_nnunet
+export PYTHONNOUSERSITE=1
 
 
 cd {parent_directory}/dropout-nnunet-flair-t1/nnUNet
