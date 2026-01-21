@@ -20,7 +20,7 @@ pip install -e .
 Or equivalently run 
 
 ```
-sbatch intstall_drp_nnunet.sh
+sbatch install_drp_nnunet.sh
 ```
 **Data formatting**
 
