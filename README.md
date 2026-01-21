@@ -21,7 +21,6 @@ Or equivalently run
 
 ```
 git clone https://github.com/dchry/dropout-nnunet-flair-t1.git
-cd dropout-nnunet-flair-t1
 sbatch intstall_drp_nnunet.sh
 ```
 **Data formatting**
