@@ -8,7 +8,7 @@ To clone the code and install all dependencies, run the block below, ensuring yo
 ```
 git clone https://github.com/dchry/dropout-nnunet-flair-t1.git
 cd dropout-nnunet-flair-t1
-conda env create -f requirements.yml
+conda env create -f requirements_v2.yml
 conda activate dropout_nnunet
 cd nnUNet
 pip install -e .
