@@ -2,8 +2,8 @@
 #SBATCH --mem=32G
 #SBATCH -c 16
 #SBATCH -t 02:00:00
-#SBATCH --error=/home/chrysochod/HPC_Errors/make_nnUNet_v2.err
-#SBATCH --output=/home/chrysochod/HPC_Outputs/make_nnUNet_v2.out
+#SBATCH --error=/home/chrysochod/DRP_REPLICATION_FOR_GIT_PUBLISHING/logs/make_nnUNet_v2.err
+#SBATCH --output=/home/chrysochod/DRP_REPLICATION_FOR_GIT_PUBLISHING/logs/make_nnUNet_v2.out
 #SBATCH -p gpuq
 #SBATCH --gres=gpu:a100:1
 
