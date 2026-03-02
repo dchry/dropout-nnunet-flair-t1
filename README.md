@@ -80,7 +80,7 @@ inference_scripts/infer_nnUNet_dropout_p40.sh
 ```
 
 **Evaluation**
-To calculate Dice scores for the predicted segmentation masks per subregion, you can use the script below
+To calculate Dice scores for the predicted segmentation masks per subregion, you can adapt the following script to your evaluation pipeline
 
 ```
 inference_scripts/dice.py
