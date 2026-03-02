@@ -14,7 +14,7 @@ date
 # Activate the Miniconda base environment.
 source {your_conda_directory}/miniconda3/bin/activate
 
-conda activate dropout_nnunet
+conda activate drp_nnUNet
 
 
 cd {parent_directory}/dropout-nnunet-flair-t1/nnUNet
