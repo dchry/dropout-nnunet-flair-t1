@@ -68,6 +68,7 @@ train_scripts/train_nnUNet_dropout_p40.sh
 ```
 
 **Inference**
+
 During inference, the model expects 4 nifti scans. We set missing FLAIR and/or T1 to zeroed images using the script below
 ```
 ```
