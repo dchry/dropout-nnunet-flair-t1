@@ -6,7 +6,7 @@
 #SBATCH --output=/logs/out_%j.out
 #SBATCH -p gpuq
 #SBATCH --gres=gpu:a100:1
-#SBATCH --job-name=drp_p40
+#SBATCH --job-name=drp_p50
 
 module load cuda11.8/toolkit/11.8.0
 nvidia-smi
