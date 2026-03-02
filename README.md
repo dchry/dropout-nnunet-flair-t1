@@ -74,4 +74,6 @@ We can use the models trained at different levels of dropout with the correspond
 inference_scripts/infer_nnUNet_dropout_p40.sh
 ```
 
+**Evaluation**
+
 
