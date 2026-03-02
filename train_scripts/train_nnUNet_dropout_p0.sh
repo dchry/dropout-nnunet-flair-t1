@@ -15,7 +15,7 @@ date
 # Activate the Miniconda base environment
 source {your_conda_directory}/miniconda3/bin/activate
 
-conda activate dropout_nnUNet
+conda activate drp_nnUNet
 # pip install blosc2
 
 
