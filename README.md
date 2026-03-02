@@ -64,5 +64,5 @@ train_scripts/plan_and_preprocess.sh
 ```
 Then, we train 3d_fullres configuration nnUNet models with different levels of dropout applied independently to channels 0 (FLAIR) and 1 (T1w-pre). For example, to train a model with modality dropout of p=0.4, you can use the following script
 ```
-train_nnUNet_dropout_p40.sh
+train_scripts/train_nnUNet_dropout_p40.sh
 ```
