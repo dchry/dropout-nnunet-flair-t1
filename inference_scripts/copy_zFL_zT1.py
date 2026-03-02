@@ -1,3 +1,35 @@
+"""
+Script: Prepare Incomplete-Modality Inference Set for nnUNet Segmentation
+
+Description:
+This script prepares a validation subset for segmentation experiments under 
+missing-modality conditions. It performs the following steps:
+
+1. Reads the validation subject IDs from `splits_final.json`. You can use your own list depending on your subcohort.
+2. Copies the available modalities (T1ce and T2) for each subject into a 
+   specified destination directory using nnUNet channel naming conventions.
+3. Creates zero-filled NIfTI volumes to simulate missing modalities:
+      - FLAIR  -> saved as *_0000.nii.gz
+      - T1     -> saved as *_0001.nii.gz
+4. The zero volumes inherit affine and header information from an existing 
+   modality to preserve spatial metadata compatibility.
+
+Purpose:
+This enables evaluation of segmentation models under incomplete MRI inputs,
+while maintaining nnUNet’s expected 4-channel structure:
+    0000 = FLAIR
+    0001 = T1
+    0002 = T1ce
+    0003 = T2
+
+Assumptions:
+- Input images follow nnUNet raw dataset structure:
+  Dataset001_BrainTumor/imagesTr/<subject>_XXXX.nii.gz
+- All volumes are 240×240×155.
+- T1ce and T2 are available for every subject in the validation split.
+- The destination directory already exists.
+"""
+
 import pandas as pd
 import shutil
 import os 
@@ -8,12 +40,12 @@ import json
 destination_directory = '/path/to/nifti/to/be/segmented'
 
 #form subject list from splits_final.json
-file_path = "/home/chrysochod/dropout_nnUNet_data/preprocessed/Dataset001_BrainTumor/splits_final.json" 
+file_path = "data/preprocessed/Dataset001_BrainTumor/splits_final.json" 
 # Load JSON data from file
 with open(file_path, "r") as file:
     json_data = json.load(file)
 # Extract the first "val" list
-first_val_list = json_data[0]["val"]
+first_val_list = json_data[0]["val"] #first fold of validation set
 
 print(first_val_list)
 
@@ -34,8 +66,9 @@ def sub_copy(path_T1ce, path_T2, directory_destination, element):
 
 
 for subject in first_val_list:
-    path_T2 = '/home/chrysochod/dropout_nnUNet_data/raw/Dataset001_BrainTumor/imagesTr/'+subject+'_0003.nii.gz'
-    path_T1ce='/home/chrysochod/dropout_nnUNet_data/raw/Dataset001_BrainTumor/imagesTr/'+subject+'_0002.nii.gz'
+    #Available modalities
+    path_T2 = 'data/'+subject+'_0003.nii.gz'
+    path_T1ce='data/'+subject+'_0002.nii.gz'
 
     sub_copy(path_T1ce, path_T2, destination_directory, subject)
 
