@@ -74,7 +74,7 @@ During inference, the model expects 4 nifti scans with the nnUNet v2 model namin
 inference_scripts/copy_zFL_zT1.py
 ```
 
-We can then use the models trained at different dropout levels with the corresponding scripts in inference_scripts. For example, for the model trained with p=0.4, you can use the following script, adjusting the associated paths. 
+We can then use the models trained at different dropout levels with the corresponding scripts under /inference_scripts. For example, for the model trained with p=0.4, you can use the following script, adjusting the associated paths. 
 ```
 inference_scripts/infer_nnUNet_dropout_p40.sh
 ```
