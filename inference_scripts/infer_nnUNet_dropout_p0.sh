@@ -7,7 +7,7 @@
 #SBATCH --output=/out/path
 #SBATCH -p gpuq
 #SBATCH --gres=gpu:a100:1
-#SBATCH --job-name=infer_p40
+#SBATCH --job-name=infer_p0
 
 
 module load cuda11.8/toolkit/11.8.0
