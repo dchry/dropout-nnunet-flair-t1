@@ -66,7 +66,12 @@ Then, we train 3d_fullres configuration nnUNet models with different levels of d
 ```
 train_scripts/train_nnUNet_dropout_p40.sh
 ```
+For more clarity on the dropout functionality, you can inspect the scripts under 
 
+```
+nnUNet/nnunetv2/training/nnUNetTrainer/nnUNetTrainerDropout_pX.py, X={0,10,...,100}
+batchgeneratorsv2/batchgeneratorsv2/transforms/custom/missing_modality_transform_per_image.py
+```
 **Inference**
 
 During inference, the model expects 4 nifti scans with the nnUNet v2 model naming convention. We set missing FLAIR and/or T1 to zeroed images and copy available modalities using the script below
