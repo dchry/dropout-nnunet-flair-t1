@@ -69,8 +69,9 @@ train_scripts/train_nnUNet_dropout_p40.sh
 
 **Inference**
 
-During inference, the model expects 4 nifti scans. We set missing FLAIR and/or T1 to zeroed images using the script below
+During inference, the model expects 4 nifti scans with the nnUNet v2 model naming convention. We set missing FLAIR and/or T1 to zeroed images and copy available modalities using the script below
 ```
+inference_scripts/copy_zFL_zT1.py
 ```
 
 We can then use the models trained at different dropout levels with the corresponding scripts in inference_scripts. For example, for the model trained with p=0.4, you can use the following script, adjusting the associated paths. 
