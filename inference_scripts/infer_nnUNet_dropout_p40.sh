@@ -20,10 +20,8 @@ conda activate drp_nnUNet
 # pip install blosc2
 
 
-cd {parent_directory}/dropout-nnunet-flair-t1/nnUNet
+cd {parent_directory}/nnUNet
 
-# export nnUNet_raw="/home/chrysochod/dropout_nnUNet_data/raw"
-# export nnUNet_preprocessed="/home/chrysochod/dropout_nnUNet_data/preprocessed"
 export nnUNet_results="{parent_directory}/data/results"
 
 
