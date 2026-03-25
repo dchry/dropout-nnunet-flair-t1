@@ -17,7 +17,7 @@ source {your_conda_directory}/miniconda3/bin/activate
 conda activate drp_nnUNet
 
 
-cd {parent_directory}/dropout-nnunet-flair-t1/nnUNet
+cd {parent_directory}/nnUNet
 
 export nnUNet_raw="{parent_directory}/data/raw"
 export nnUNet_preprocessed="{parent_directory}/data/preprocessed"
