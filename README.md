@@ -92,4 +92,12 @@ To calculate Dice scores for the predicted segmentation masks per subregion, you
 inference_scripts/dice.py
 ```
 
+## Developer: Dimosthenis Chrysochoou
+
+## Usage & Citations
+Note: Use of this software is available to academic and non-profit institutions for research purposes only subject to the terms of the 2-Clause BSD License (see License). For use or transfers of the software to commercial entities, please inquire with Dr. Anahita Fathi Kazerooni - fathikazea@chop.edu. 
+
+If you use the model in your research study, please cite the following paper:
+
+1. Chrysochoou, D., Gandhi, D.B., Adib, S. et al. AI-powered segmentation and prognosis with missing MRI in pediatric brain tumors. npj Precis. Onc. (2026). https://doi.org/10.1038/s41698-025-01269-x
 
