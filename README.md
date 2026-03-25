@@ -66,7 +66,7 @@ Then, we train 3d_fullres configuration nnUNet models with different levels of d
 ```
 train_scripts/train_nnUNet_dropout_p40.sh
 ```
-For more clarity on the dropout functionality, you can inspect the scripts under 
+For more clarity on the **dropout functionality**, you can inspect the scripts under 
 
 ```
 nnUNet/nnunetv2/training/nnUNetTrainer/nnUNetTrainerDropout_pX.py, X={0,10,...,100}
