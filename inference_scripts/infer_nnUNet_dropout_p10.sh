@@ -24,8 +24,6 @@ conda activate drp_nnUNet
 
 cd {parent_directory}/nnUNet
 
-# export nnUNet_raw="/home/chrysochod/dropout_nnUNet_data/raw"
-# export nnUNet_preprocessed="/home/chrysochod/dropout_nnUNet_data/preprocessed"
 export nnUNet_results="{parent_directory}/data/results"
 
 
